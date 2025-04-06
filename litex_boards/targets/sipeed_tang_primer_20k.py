@@ -89,7 +89,7 @@ class _CRG(LiteXModule):
             video_pll.register_clkin(clk27, 27e6)
             self.cd_hdmi   = ClockDomain()
             self.cd_hdmi5x = ClockDomain()
-            video_pll.create_clkout(self.cd_hdmi5x, 125e6, margin=1e-3)
+            video_pll.create_clkout(self.cd_hdmi5x, 124.875e6, margin=1e-3)
             self.specials += Instance("CLKDIV",
                 p_DIV_MODE = "5",
                 i_RESETN   = 1, # Disable reset signal.
